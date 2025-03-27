@@ -10,12 +10,13 @@
 */
 
 .page {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
   font-family: var(--main-font), sans-serif;
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-variation-settings: 'wght' var(--font-weight-card);
-  grid-template-rows: auto 1fr auto;
-  min-height: 100vh;
 }
 
 header {
@@ -47,39 +48,37 @@ header {
 .content {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 50px;
   justify-items: center;
+  gap: 50px;
+  margin-block-end: 50px;
 }
 
 .content__section {
-  position: relative;
   display: grid;
   justify-content: center;
-  max-width: min(696px,100%);
+  width: 100%;
+  max-width: 696px;
 }
 
 .section__card {
-  position: relative;
   display: flex;
   flex-direction: column;
   border: 2px solid #000;
-  width: 100%;
 }
 
 .card__title {
-  padding: 9px;
+  padding: 3px 24px 3px 10px;
   font-size: 18px;
-  line-height: 100%;
+  line-height: 140%;
   font-variation-settings: 'wght' var(--font-weight-title);
-  
 }
 
 .card__image-container {
-  width: 100%;
-  border: 2px solid #000;
-  max-width: 696px;
-  overflow: hidden;
   position: relative;
+  width: 696px;
+  height: 700px;
+  
+  overflow: hidden;
 }
 
 .card__image-container img {
@@ -91,18 +90,21 @@ header {
 .card__image-label {
   position: absolute;
   top: 25px;
-  right: 25px;
-  z-index: 1;
+  right: 23px;
   font-family: var(--accent-font);
   font-weight: var(--font-weight-card);
   font-size: 14px;
   line-height: 100%;
-  text-shadow:  -1px -1px 0 #fff,
-  1px -1px 0 #fff,
-  -1px 1px 0 #fff,
-  1px 1px 0 #fff,
-  0 0 4px #fff;
-  opacity: 0.5;
+  text-shadow:  0px 0px 2px var(--shadow-color);
+  mix-blend-mode: hard-light;
+}
+
+@supports (mix-blend-mode: hard-light) or (-webkit-mix-blend-mode: hard-light) {
+  .card__image-label {
+    mix-blend-mode: hard-light;
+    -webkit-mix-blend-mode: hard-light;
+    text-shadow: none;
+  }
 }
 
 .card__description {
@@ -139,38 +141,39 @@ header {
 
 .card__like-button {
   border: 2px solid #000;
-  padding: 8px 32px;
+  padding: 7px 32px;
   background-color: transparent;
-  inline-size: 130px;
   cursor: pointer;
+  inline-size: 130px;
 }
 
 .button__text {
+  vertical-align: middle;
+  overflow: hidden;
   font-family: var(--accent-font);
   font-size: 14px;
   line-height: 90%;
-  font-variation-settings: 'wght' var(--font-weight-card);
-  vertical-align: middle;
-  white-space: nowrap;
-  overflow: hidden;
   text-overflow: ellipsis;
+  font-variation-settings: 'wght' var(--font-weight-card);
+  white-space: nowrap;
 }
 
 .button__save {
   display: flex;
-  max-width: 335px;
-  background-color: transparent;
-  border: 2px solid #000;
-  align-items: center;
-  justify-self: center;
-  gap: 8px;
-  padding: 15px 18px;
   flex-shrink: 0;
+  justify-self: center;
+  align-items: center;
+  align-self: center;
+  gap: 8px;
+  max-width: 335px;
+  border: 2px solid #000;
+  padding: 15px 18px;
+  background-color: transparent;
 }
 
 .button__save svg {
   display: block;
-  object-fit: cover;
   width: 21px;
   height: 21px;
+  object-fit: cover;
 }

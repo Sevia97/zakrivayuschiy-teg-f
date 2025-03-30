@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Закрывающий тег</title>
-    <link rel="stylesheet" href="./fonts/fonts.css">
-    <link rel="stylesheet" href="./styles/variables.css">
-    <link rel="stylesheet" href="./styles/globals.css">
-    <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet" href="./styles/animations.css">
-    <link rel="icon" href="./images/favicon.ico" sizes="any">
-    <link rel="icon" href="./svg/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="./images/mobile-icon.png">
+    <link rel="stylesheet" href="./fonts/fonts.css" />
+    <link rel="stylesheet" href="./styles/variables.css" />
+    <link rel="stylesheet" href="./styles/globals.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/animations.css" />
+    <link rel="stylesheet" href="./styles/filter.css" />
+    <link rel="icon" href="./images/favicon.ico" sizes="any" />
+    <link rel="icon" href="./svg/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./images/mobile-icon.png" />
   </head>
   <body class="page">
     <header class="header">
@@ -25,7 +26,11 @@
             Фритрек и нулевой спринт: Подготовка к работе
           </h2>
           <div class="card__image-container">
-            <img src="./images/image.png" alt="картинка с домом на колесах" />
+            <img
+              class="filter__one"
+              src="./images/image.png"
+              alt="картинка с домом на колесах"
+            />
             <span class="card__image-label">&lt;/HTML&gt;</span>
           </div>
           <div class="card__description">
@@ -39,22 +44,51 @@
           <div class="card__button-container">
             <button class="card__icon-button" type="button">
               <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="27"
-                height="24"
+                class="like-icon"
+                width="39"
+                height="36"
+                viewBox="0 0 39 36"
                 fill="none"
+                xmlns="http://www.w3.org/2000/svg"
               >
+                <g class="heart">
+                  <path
+                    class="contour"
+                    d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 
+              6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 
+              6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 
+              18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
+                    fill="var(--contour-color)"
+                  />
+
+                  <path
+                    class="main-body"
+                    d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 
+              15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 
+              9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 
+              15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 
+              18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z"
+                    fill="none"
+                  />
+
+                  <path
+                    class="core"
+                    d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 
+              18H18V21H21V18Z"
+                    fill="none"
+                  />
+                </g>
+
                 <path
-                  fill="#000"
-                  d="M6 0H3v3h3V0Zm3 0H6v3h3V0ZM3 3H0v3h3V3Zm0 3H0v3h3V6Zm0 
-                3H0v3h3V9Zm9-9H9v3h3V0ZM6 12H3v3h3v-3Zm3 3H6v3h3v-3Zm3 3H9v3h3v-3Zm9-18h3v3h-3V0Zm-3 
-                0h3v3h-3V0Zm6 3h3v3h-3V3Zm0 3h3v3h-3V6Zm0 3h3v3h-3V9Zm-9-9h3v3h-3V0Zm6 
-                12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0-15h-3v3h3V3Zm0 18h-3v3h3v-3Z"
+                  class="sparks"
+                  d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 
+              0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"
+                  fill="var(--animation-fill-color)"
                 />
               </svg>
             </button>
-            <button class="card__like-button" type="button">
-              <span class="button__text"> Like </span>
+            <button class="button card__like-button" type="button">
+              <span class="button__text">Like</span>
             </button>
           </div>
         </article>
@@ -63,7 +97,11 @@
         <article class="section__card">
           <h2 class="card__title">1 спринт: Я — чистый лист</h2>
           <div class="card__image-container">
-            <img src="./images/image.png" alt="картинка с домом на колесах" />
+            <img
+              class="filter__two"
+              src="./images/image.png"
+              alt="картинка с домом на колесах"
+            />
             <span class="card__image-label">&lt;/HTML&gt;</span>
           </div>
           <div class="card__description">
@@ -79,21 +117,43 @@
           <div class="card__button-container">
             <button class="card__icon-button" type="button">
               <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="27"
-                height="24"
+                class="like-icon"
+                width="39"
+                height="36"
+                viewBox="0 0 39 36"
                 fill="none"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  fill="#000"
-                  d="M6 0H3v3h3V0Zm3 0H6v3h3V0ZM3 3H0v3h3V3Zm0 3H0v3h3V6Zm0 
-                3H0v3h3V9Zm9-9H9v3h3V0ZM6 12H3v3h3v-3Zm3 3H6v3h3v-3Zm3 3H9v3h3v-3Zm9-18h3v3h-3V0Zm-3 
-                0h3v3h-3V0Zm6 3h3v3h-3V3Zm0 3h3v3h-3V6Zm0 3h3v3h-3V9Zm-9-9h3v3h-3V0Zm6 
-                12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0-15h-3v3h3V3Zm0 18h-3v3h3v-3Z"
+                  d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 
+              6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 
+              6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 
+              18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
+                  fill="black"
+                />
+
+                <path
+                  d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 
+              18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 
+              9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 
+              15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 
+              21H18V24H21V21ZM21 24H18V27H21V24Z"
+                  fill="#FF0000"
+                />
+
+                <path
+                  d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z"
+                  fill="white"
+                />
+
+                <path
+                  d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 
+              0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"
+                  fill="#FF0000"
                 />
               </svg>
             </button>
-            <button class="card__like-button" type="button">
+            <button class="button card__like-button" type="button">
               <span class="button__text"> Like </span>
             </button>
           </div>
@@ -103,7 +163,11 @@
         <article class="section__card">
           <h2 class="card__title">1 спринт: А если не получится?</h2>
           <div class="card__image-container">
-            <img src="./images/image.png" alt="картинка с домом на колесах" />
+            <img
+              class="filter__three"
+              src="./images/image.png"
+              alt="картинка с домом на колесах"
+            />
             <span class="card__image-label">&lt;CSS&gt;</span>
           </div>
           <div class="card__description">
@@ -117,21 +181,44 @@
           <div class="card__button-container">
             <button class="card__icon-button" type="button">
               <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="27"
-                height="24"
+                class="like-icon"
+                width="39"
+                height="36"
+                viewBox="0 0 39 36"
                 fill="none"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  fill="#000"
-                  d="M6 0H3v3h3V0Zm3 0H6v3h3V0ZM3 3H0v3h3V3Zm0 3H0v3h3V6Zm0 
-                3H0v3h3V9Zm9-9H9v3h3V0ZM6 12H3v3h3v-3Zm3 3H6v3h3v-3Zm3 3H9v3h3v-3Zm9-18h3v3h-3V0Zm-3 
-                0h3v3h-3V0Zm6 3h3v3h-3V3Zm0 3h3v3h-3V6Zm0 3h3v3h-3V9Zm-9-9h3v3h-3V0Zm6 
-                12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0-15h-3v3h3V3Zm0 18h-3v3h3v-3Z"
+                  d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 
+              6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 
+              6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 
+              18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
+                  fill="black"
+                />
+
+                <path
+                  d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 
+              15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 
+              9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 
+              15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 
+              18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z"
+                  fill="#FF0000"
+                />
+
+                <path
+                  d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 
+              18H18V21H21V18Z"
+                  fill="white"
+                />
+
+                <path
+                  d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 
+              0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"
+                  fill="#FF0000"
                 />
               </svg>
             </button>
-            <button class="card__like-button" type="button">
+            <button class="button card__like-button" type="button">
               <span class="button__text"> Like </span>
             </button>
           </div>
@@ -141,7 +228,11 @@
         <article class="section__card">
           <h2 class="card__title">2 спринт: Погоня за идеалом</h2>
           <div class="card__image-container">
-            <img src="./images/image.png" alt="картинка с домом на колесах" />
+            <img
+              class="filter__four"
+              src="./images/image.png"
+              alt="картинка с домом на колесах"
+            />
             <span class="card__image-label">&lt;desigions&gt;</span>
           </div>
           <div class="card__description">
@@ -157,21 +248,44 @@
           <div class="card__button-container">
             <button class="card__icon-button" type="button">
               <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="27"
-                height="24"
+                class="like-icon"
+                width="39"
+                height="36"
+                viewBox="0 0 39 36"
                 fill="none"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  fill="#000"
-                  d="M6 0H3v3h3V0Zm3 0H6v3h3V0ZM3 3H0v3h3V3Zm0 3H0v3h3V6Zm0 
-                3H0v3h3V9Zm9-9H9v3h3V0ZM6 12H3v3h3v-3Zm3 3H6v3h3v-3Zm3 3H9v3h3v-3Zm9-18h3v3h-3V0Zm-3 
-                0h3v3h-3V0Zm6 3h3v3h-3V3Zm0 3h3v3h-3V6Zm0 3h3v3h-3V9Zm-9-9h3v3h-3V0Zm6 
-                12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0-15h-3v3h3V3Zm0 18h-3v3h3v-3Z"
+                  d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 
+              6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 
+              6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 
+              18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
+                  fill="black"
+                />
+
+                <path
+                  d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 
+              15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 
+              9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 
+              15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 
+              18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z"
+                  fill="#FF0000"
+                />
+
+                <path
+                  d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 
+              18H18V21H21V18Z"
+                  fill="white"
+                />
+
+                <path
+                  d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 
+              0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"
+                  fill="#FF0000"
                 />
               </svg>
             </button>
-            <button class="card__like-button" type="button">
+            <button class="button card__like-button" type="button">
               <span class="button__text"> Like </span>
             </button>
           </div>
@@ -181,7 +295,11 @@
         <article class="section__card">
           <h2 class="card__title">2 спринт: О тех, кто рядом</h2>
           <div class="card__image-container">
-            <img src="./images/image.png" alt="картинка с домом на колесах" />
+            <img
+              class="filter__five"
+              src="./images/image.png"
+              alt="картинка с домом на колесах"
+            />
             <span class="card__image-label">care</span>
           </div>
           <div class="card__description">
@@ -198,21 +316,44 @@
           <div class="card__button-container">
             <button class="card__icon-button" type="button">
               <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="27"
-                height="24"
+                class="like-icon"
+                width="39"
+                height="36"
+                viewBox="0 0 39 36"
                 fill="none"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  fill="#000"
-                  d="M6 0H3v3h3V0Zm3 0H6v3h3V0ZM3 3H0v3h3V3Zm0 3H0v3h3V6Zm0 
-                3H0v3h3V9Zm9-9H9v3h3V0ZM6 12H3v3h3v-3Zm3 3H6v3h3v-3Zm3 3H9v3h3v-3Zm9-18h3v3h-3V0Zm-3 
-                0h3v3h-3V0Zm6 3h3v3h-3V3Zm0 3h3v3h-3V6Zm0 3h3v3h-3V9Zm-9-9h3v3h-3V0Zm6 
-                12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0-15h-3v3h3V3Zm0 18h-3v3h3v-3Z"
+                  d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 
+              6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 
+              6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 
+              18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
+                  fill="black"
+                />
+
+                <path
+                  d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 
+              15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 
+              9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 
+              15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 
+              18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z"
+                  fill="#FF0000"
+                />
+
+                <path
+                  d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 
+              18H18V21H21V18Z"
+                  fill="white"
+                />
+
+                <path
+                  d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 
+              0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"
+                  fill="#FF0000"
                 />
               </svg>
             </button>
-            <button class="card__like-button" type="button">
+            <button class="button card__like-button" type="button">
               <span class="button__text"> Like </span>
             </button>
           </div>
@@ -222,7 +363,11 @@
         <article class="section__card">
           <h2 class="card__title">3 спринт: Обходные стратегии</h2>
           <div class="card__image-container">
-            <img src="./images/image.png" alt="картинка с домом на колесах" />
+            <img
+              class="filter__six"
+              src="./images/image.png"
+              alt="картинка с домом на колесах"
+            />
             <span class="card__image-label">&lt;support&gt;</span>
           </div>
           <div class="card__description">
@@ -236,21 +381,44 @@
           <div class="card__button-container">
             <button class="card__icon-button" type="button">
               <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="27"
-                height="24"
+                class="like-icon"
+                width="39"
+                height="36"
+                viewBox="0 0 39 36"
                 fill="none"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  fill="#000"
-                  d="M6 0H3v3h3V0Zm3 0H6v3h3V0ZM3 3H0v3h3V3Zm0 3H0v3h3V6Zm0 
-                3H0v3h3V9Zm9-9H9v3h3V0ZM6 12H3v3h3v-3Zm3 3H6v3h3v-3Zm3 3H9v3h3v-3Zm9-18h3v3h-3V0Zm-3 
-                0h3v3h-3V0Zm6 3h3v3h-3V3Zm0 3h3v3h-3V6Zm0 3h3v3h-3V9Zm-9-9h3v3h-3V0Zm6 
-                12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0-15h-3v3h3V3Zm0 18h-3v3h3v-3Z"
+                  d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 
+              6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 
+              6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 
+              18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
+                  fill="black"
+                />
+
+                <path
+                  d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 
+              15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 
+              9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 
+              15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 
+              18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z"
+                  fill="#FF0000"
+                />
+
+                <path
+                  d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 
+              18H18V21H21V18Z"
+                  fill="white"
+                />
+
+                <path
+                  d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 
+              0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"
+                  fill="#FF0000"
                 />
               </svg>
             </button>
-            <button class="card__like-button" type="button">
+            <button class="button card__like-button" type="button">
               <span class="button__text"> Like </span>
             </button>
           </div>
@@ -260,7 +428,11 @@
         <article class="section__card">
           <h2 class="card__title">3 спринт: Когда опускаются руки</h2>
           <div class="card__image-container">
-            <img src="./images/image.png" alt="картинка с домом на колесах" />
+            <img
+              class="filter__seven"
+              src="./images/image.png"
+              alt="картинка с домом на колесах"
+            />
             <span class="card__image-label">&lt;lifes-style: none;&gt;</span>
           </div>
           <div class="card__description">
@@ -276,21 +448,47 @@
           <div class="card__button-container">
             <button class="card__icon-button" type="button">
               <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="27"
-                height="24"
+                class="like-icon"
+                width="39"
+                height="36"
+                viewBox="0 0 39 36"
                 fill="none"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  fill="#000"
-                  d="M6 0H3v3h3V0Zm3 0H6v3h3V0ZM3 3H0v3h3V3Zm0 3H0v3h3V6Zm0 
-                3H0v3h3V9Zm9-9H9v3h3V0ZM6 12H3v3h3v-3Zm3 3H6v3h3v-3Zm3 3H9v3h3v-3Zm9-18h3v3h-3V0Zm-3 
-                0h3v3h-3V0Zm6 3h3v3h-3V3Zm0 3h3v3h-3V6Zm0 3h3v3h-3V9Zm-9-9h3v3h-3V0Zm6 
-                12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0-15h-3v3h3V3Zm0 18h-3v3h3v-3Z"
+                  d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 
+              15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 
+              24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 
+              12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 
+              21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
+                  fill="black"
+                />
+
+                <path
+                  d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 
+              15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 
+              18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 
+              12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 
+              18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 
+              21H18V24H21V21ZM21 24H18V27H21V24Z"
+                  fill="#FF0000"
+                />
+
+                <path
+                  d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 
+              12H18V15H21V12ZM21 18H18V21H21V18Z"
+                  fill="white"
+                />
+
+                <path
+                  d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 
+              27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 
+              13H3V16H0V13Z"
+                  fill="#FF0000"
                 />
               </svg>
             </button>
-            <button class="card__like-button" type="button">
+            <button class="button card__like-button" type="button">
               <span class="button__text"> Like </span>
             </button>
           </div>
@@ -300,7 +498,11 @@
         <article class="section__card">
           <h2 class="card__title">«Сейчас я здесь»</h2>
           <div class="card__image-container">
-            <img src="./images/image.png" alt="картинка с домом на колесах" />
+            <img
+              class="filter__eight"
+              src="./images/image.png"
+              alt="картинка с домом на колесах"
+            />
             <span class="card__image-label">&lt;experience&gt;</span>
           </div>
           <div class="card__description">
@@ -320,21 +522,45 @@
           <div class="card__button-container">
             <button class="card__icon-button" type="button">
               <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="27"
-                height="24"
+                class="like-icon"
+                width="39"
+                height="36"
+                viewBox="0 0 39 36"
                 fill="none"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  fill="#000"
-                  d="M6 0H3v3h3V0Zm3 0H6v3h3V0ZM3 3H0v3h3V3Zm0 3H0v3h3V6Zm0 
-                3H0v3h3V9Zm9-9H9v3h3V0ZM6 12H3v3h3v-3Zm3 3H6v3h3v-3Zm3 3H9v3h3v-3Zm9-18h3v3h-3V0Zm-3 
-                0h3v3h-3V0Zm6 3h3v3h-3V3Zm0 3h3v3h-3V6Zm0 3h3v3h-3V9Zm-9-9h3v3h-3V0Zm6 
-                12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0-15h-3v3h3V3Zm0 18h-3v3h3v-3Z"
+                  d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 
+              15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 
+              24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 
+              12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 
+              21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
+                  fill="black"
+                />
+
+                <path
+                  d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 
+              15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 
+              18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 
+              9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 
+              21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z"
+                  fill="#FF0000"
+                />
+
+                <path
+                  d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 
+              18H18V21H21V18Z"
+                  fill="white"
+                />
+
+                <path
+                  d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 
+              0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"
+                  fill="#FF0000"
                 />
               </svg>
             </button>
-            <button class="card__like-button" type="button">
+            <button class="button card__like-button" type="button">
               <span class="button__text"> Like </span>
             </button>
           </div>
@@ -342,26 +568,52 @@
       </section>
     </main>
     <footer>
-      <button class="button__save">
-        <svg viewBox="0 0 29 28">
-          <use href="#floppy-1" />
+      <button
+        class="button button__save"
+        onclick="window['dialog-id'].showModal()"
+        aria-controls="dialog-id"
+      >
+        <svg class="save-icon" viewBox="0 0 29 28">
+          <use href="#floppy" />
         </svg>
         <span class="button__text">Сохранить на память</span>
       </button>
+      <dialog class="dialog" id="dialog-id">
+        <div class="dialog__content">
+          <svg class="dialog__icon" viewBox="0 0 39 39">
+            <use href="#floppy" />
+          </svg>
+          <span class="dialog__text">Вставьте дискету, чтобы продолжить</span>
+        </div>
+        <button
+          class="button__dialog button"
+          type="button"
+          onclick="window['dialog-id'].close()"
+        >
+          <span class="button button__text">OK</span>
+        </button>
+      </dialog>
     </footer>
     <script src="./scripts/like.js"></script>
   </body>
 </html>
 
-<svg xmlns="http://www.w3.org/2000/svg" width="29" height="28" fill="none">
-  <symbol id="floppy-1">
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="29"
+  height="28"
+  viewBox="0 0 29 28"
+  fill="none"
+>
+  <symbol id="floppy">
     <path
       fill="#000"
       d="M.5 0h2.154v2.154H.5zm0 2.154h2.154v2.154H.5zm0 2.154h2.154v2.154H.5z"
     />
     <path
       fill="#000"
-      d="M.5 6.461h2.154v2.154H.5zm0 2.154h2.154v2.154H.5zm0 2.154h2.154v2.154H.5zm0 2.154h2.154v2.154H.5zm0 2.154h2.154v2.154H.5zm0 2.154h2.154v2.154H.5zm0 2.154h2.154v2.154H.5zm0 2.154h2.154v2.154H.5z"
+      d="M.5 6.461h2.154v2.154H.5zm0 2.154h2.154v2.154H.5zm0 2.154h2.154v2.154H.5zm0 2.154h2.154v2.154H.5zm0 2.154h2.154v2.154H.5zm0 
+      2.154h2.154v2.154H.5zm0 2.154h2.154v2.154H.5zm0 2.154h2.154v2.154H.5z"
     />
     <path
       fill="#000"
@@ -377,7 +629,8 @@
     />
     <path
       fill="#000"
-      d="M9.116 0v2.154H6.962V0zM6.96 0v2.154H4.808V0zM4.807 0v2.154H2.653V0zm21.539 2.153v2.154h-2.154V2.153zM6.96 4.308v2.154H4.808V4.308zm0-2.154v2.154H4.808V2.154z"
+      d="M9.116 0v2.154H6.962V0zM6.96 0v2.154H4.808V0zM4.807 0v2.154H2.653V0zm21.539 2.153v2.154h-2.154V2.153zM6.96 
+      4.308v2.154H4.808V4.308zm0-2.154v2.154H4.808V2.154z"
     />
     <path
       fill="#000"
@@ -389,7 +642,9 @@
     />
     <path
       fill="#000"
-      d="M17.73 6.46v2.155h-2.153V6.46zm4.31 2.155v2.154h-2.155V8.615zm-2.156 0v2.154H17.73V8.615zm-2.154 0v2.154h-2.153V8.615zm-2.153 0v2.154h-2.154V8.615zm-2.154 0v2.154H11.27V8.615zm-2.153.001v2.154H9.116V8.616zm-2.154-.001v2.154H6.962V8.615zm-2.155 0v2.154H4.807V8.615zm17.231 6.462v2.154h-2.154v-2.154z"
+      d="M17.73 6.46v2.155h-2.153V6.46zm4.31 2.155v2.154h-2.155V8.615zm-2.156 0v2.154H17.73V8.615zm-2.154 0v2.154h-2.153V8.615zm-2.153 
+      0v2.154h-2.154V8.615zm-2.154 0v2.154H11.27V8.615zm-2.153.001v2.154H9.116V8.616zm-2.154-.001v2.154H6.962V8.615zm-2.155 0v2.154H4.807V8.615zm17.231 
+      6.462v2.154h-2.154v-2.154z"
     />
     <path
       fill="#000"
@@ -400,7 +655,8 @@
     <path fill="#000" d="M11.27 15.077v2.154H9.114v-2.154z" />
     <path
       fill="#000"
-      d="M9.116 15.077v2.154H6.962v-2.154zm-2.156 0v2.154H4.808v-2.154zm17.233 2.154v2.154h-2.154v-2.154zm-17.233 0v2.154H4.808v-2.154zm17.232 2.154v2.154h-2.154v-2.154zm-17.232 0v2.154H4.808v-2.154zm17.232 2.154v2.154h-2.154v-2.154zm-17.232 0v2.154H4.808v-2.154z"
+      d="M9.116 15.077v2.154H6.962v-2.154zm-2.156 0v2.154H4.808v-2.154zm17.233 2.154v2.154h-2.154v-2.154zm-17.233 0v2.154H4.808v-2.154zm17.232 
+      2.154v2.154h-2.154v-2.154zm-17.232 0v2.154H4.808v-2.154zm17.232 2.154v2.154h-2.154v-2.154zm-17.232 0v2.154H4.808v-2.154z"
     />
     <path
       fill="#000"
@@ -409,7 +665,9 @@
     <path fill="#000" d="M24.193 25.846V28h-2.154v-2.154z" />
     <path
       fill="#000"
-      d="M22.04 25.846V28h-2.155v-2.154zm-2.156 0V28H17.73v-2.154zm-2.154 0V28h-2.153v-2.154zm-2.153 0V28h-2.154v-2.154zm-2.154 0V28H11.27v-2.154zm-2.153.001V28H9.116v-2.154zm-2.154-.001V28H6.962v-2.154zm-2.155 0V28H4.807v-2.154zm-2.154 0V28H2.653v-2.154zM28.5 28h-2.154v-2.154H28.5zm0-2.154h-2.154v-2.154H28.5z"
+      d="M22.04 25.846V28h-2.155v-2.154zm-2.156 0V28H17.73v-2.154zm-2.154 0V28h-2.153v-2.154zm-2.153 0V28h-2.154v-2.154zm-2.154 
+      0V28H11.27v-2.154zm-2.153.001V28H9.116v-2.154zm-2.154-.001V28H6.962v-2.154zm-2.155 0V28H4.807v-2.154zm-2.154 0V28H2.653v-2.154zM28.5 
+      28h-2.154v-2.154H28.5zm0-2.154h-2.154v-2.154H28.5z"
     />
     <path
       fill="#000"

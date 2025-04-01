@@ -4,19 +4,25 @@
   --accent-font: 'PressStart2P-Regular';
   --font-weight-card: 400;
   --font-weight-title: 700;
+
   --header-title-size: clamp(49px, 4.5vw, 65px);
   --header-description-size: clamp(14px,calc(14px + (23 - 14) * (100vw - 375px) / (1440 - 375)), 23px);
   --header-padding: clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem) clamp(0.875rem, -1.4688rem + 10vw, 7.53125rem);
   --header-size: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
+  
   --shadow-color: #fff;
   --border-color: #000;
+  
+
   --background: repeating-linear-gradient(to right, transparent, transparent 2px,#d3d3d3 2px,#d3d3d3 4px),
                 repeating-linear-gradient(to bottom, transparent, transparent 2px,#d3d3d3 2px,#d3d3d3 4px),
                 linear-gradient(to bottom,#e7e7e7 0%,#e7e7e7 0.01%,#1a1a1a 100%);
+  --background-color: #fff;
+  
   --button-text-color: #fff;
   --button-bg-color: #000;
+
   --icon-color: #000;
-  --hover-color: #fff;
   --contour-color: #000;
   --animation-fill-color: #FF0000;
 }

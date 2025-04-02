@@ -35,11 +35,13 @@ header {
   padding: var(--header-padding);
   font-family: var(--accent-font), "Courier New";
   background-color: var(--background-color);
-  inline-size: var(--header-size);
+  inline-size: var(--header-size-l);
 }
 
-header .mobile {
-  width: 100%;
+@media (width <= 375px) {
+  header {
+    width: 100%;
+  }
 }
 
 .header__title {
@@ -88,7 +90,7 @@ header .mobile {
   font-variation-settings: "wght" var(--font-weight-title);
 }
 
-@media (width <= 375px) {
+@media (width <=375px) {
   .card__title {
     padding: 4px 10px 6px 10px;
     line-height: 123%;
@@ -100,13 +102,13 @@ header .mobile {
   border: 2px solid var(--border-color);
   overflow: hidden;
   min-inline-size: 696px;
-  min-block-size: 698px;
+  min-block-size: 700px;
 }
 
 @media (width <= 375px) {
   .card__image-container {
     min-inline-size: 371px;
-    min-block-size: 374px;
+    min-block-size: 371px;
   }
 }
 
@@ -275,10 +277,12 @@ footer {
 }
 
 .save-icon {
+  position: relative;
   z-index: 2;
   max-width: 21px;
   height: auto;
-  fill: var(--button-bg-color);
+  color: var(--button-text-color);
+  mix-blend-mode: difference;
 }
 
 @media (width <= 375px) {
@@ -317,7 +321,7 @@ footer {
 }
 
 .dialog__icon {
-  max-width: 39px;
+  min-width: 39px;
   height: auto;
 }
 

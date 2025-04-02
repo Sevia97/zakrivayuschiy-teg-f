@@ -346,7 +346,6 @@ footer {
 .dialog {
   max-inline-size: 357px;
   padding: 30px;
-  opacity: 0.5;
 }
 
 @media (width <= 375px) {

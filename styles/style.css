@@ -12,7 +12,7 @@
 .page {
   display: grid;
   grid-template-rows: auto 1fr auto;
-  height: 100vh;
+  min-height: 100vh;
   font-family: var(--main-font), sans-serif;
   background-image: var(--background);
   background-repeat: no-repeat;
@@ -24,10 +24,10 @@
   font-variation-settings: "wght" var(--font-weight-card);
 }
 
-
-header, .content {
-  max-inline-size: var(--content-size-l);
+header,
+.content {
   margin-inline: auto;
+  max-inline-size: var(--content-size-l);
 }
 
 header {
@@ -38,7 +38,7 @@ header {
   margin-block: 100px;
   border: 2px solid var(--border-color);
   padding: var(--header-padding);
-  font-family: var(--accent-font), "Courier New";
+  font-family: var(--accent-font), "fantasy";
   background-color: var(--background-color);
 }
 
@@ -48,13 +48,13 @@ header {
   }
 }
 
-.header__title {
+.header__logo {
   font-weight: var(--font-weight-card);
   font-size: var(--header-title-size);
   line-height: 100%;
 }
 
-.header__description {
+.header__title {
   font-weight: inherit;
   font-size: var(--header-description-size);
   line-height: 100%;
@@ -65,7 +65,7 @@ header {
   display: grid;
   grid-template-columns: 1fr;
   gap: 50px;
-  margin-block-end: 50px;
+  margin-block-end: 100px;
 }
 
 .content__section {
@@ -114,20 +114,21 @@ header {
   top: 25px;
   right: 23px;
   opacity: 0.5;
-  font-family: var(--accent-font), "Courier New";
+  font-family: var(--accent-font), "fantasy";
   font-weight: var(--font-weight-card);
   font-size: 14px;
   line-height: 100%;
   mix-blend-mode: hard-light;
   -webkit-text-stroke: 1px var(--shadow-color);
+  text-stroke: 1px var(--shadow-color);
 }
 
-
-@supports not (-webkit-text-stroke: 1px var(--shadow-color)) {
+@supports not ((-webkit-text-stroke: 1px var(--shadow-color)) or (text-stroke: 1px var(--shadow-color))) {
   .card__image-label {
-    text-shadow: -1px -1px 0 var(--outline-color),
-      1px -1px 0 var(--outline-color), -1px 1px 0 var(--outline-color),
-      1px 1px 0 var(--outline-color);
+    text-shadow: -1px -1px 0 var(--shadow-color), 
+    1px -1px 0 var(--shadow-color),
+    -1px 1px 0 var(--shadow-color), 
+    1px 1px 0 var(--shadow-color);
   }
 }
 
@@ -168,7 +169,7 @@ header {
   position: relative;
   z-index: 2;
   vertical-align: middle;
-  font-family: var(--accent-font), "Courier New";
+  font-family: var(--accent-font), "fantasy";
   font-size: 14px;
   line-height: 90%;
   white-space: nowrap;
@@ -297,27 +298,15 @@ header {
   transform: scaleX(1);
 }
 
-footer {
-  height: 100vh;
-  max-height: 158px;
-  margin-block-end: 103px;
-}
-
-@media (width <= 375px) {
-  footer {
-    max-height: 184px;
-  }
-}
-
 .button__save {
   display: flex;
   justify-self: center;
   align-items: center;
   gap: 8px;
-  max-inline-size: 335px;
   border: 2px solid var(--border-color);
   padding: 15px 18px;
   background-color: var(--background-color);
+  max-inline-size: 335px;
 }
 
 @media (width <= 375px) {
@@ -344,19 +333,19 @@ footer {
 }
 
 .dialog {
-  max-inline-size: 357px;
   padding: 30px;
+  max-inline-size: 357px;
 }
 
 @media (width <= 375px) {
   .dialog {
-    max-inline-size: 341px;
     padding: 30px 37px;
+    max-inline-size: 341px;
   }
 }
 
 .dialog::backdrop {
-  opacity: 0.7;
+  opacity: 0.75;
   background-color: #000;
 }
 
@@ -379,7 +368,7 @@ footer {
 
 .dialog__text {
   flex-grow: 1;
-  font-family: var(--accent-font), "Courier New";
+  font-family: var(--accent-font), "fantasy";
   font-weight: var(--font-weight-card);
   font-size: 14px;
   line-height: 150%;
@@ -388,8 +377,7 @@ footer {
 
 .button__dialog {
   align-self: flex-end;
-  inline-size: 100%;
   padding-block-start: 7px;
   padding-block-end: 7px;
+  inline-size: 100%;
 }
-

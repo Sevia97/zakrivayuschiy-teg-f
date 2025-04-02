@@ -1,31 +1,31 @@
-.filter__one {
+.filter__none {
   filter: none;
 }
 
-.filter__two {
+.filter__sepia {
   filter: sepia(50%);
 }
 
-.filter__three {
+.filter__sturate_contrast {
   filter: saturate(200%) contrast(200%);
 }
 
-.filter__four {
+.filter__hue-rotate {
   filter: hue-rotate(50deg);
 }
 
-.filter__five {
+.filter__invert {
   filter: invert(70%);
 }
 
-.filter__six {
+.filter__sepia-full {
   filter: sepia(100%);
 }
 
-.filter__seven {
+.filter__blur {
   filter: blur(10px);
 }
 
-.filter__eight {
+.filter__hue-rotate_blur {
   filter: hue-rotate(90deg) blur(1px);
 }

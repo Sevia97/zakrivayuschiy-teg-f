@@ -1,1 +1,1 @@
-https://github.com/Sevia97/zakrivayuschiy-teg-f
+githttps://sevia97.github.io/zakrivayuschiy-teg-f/

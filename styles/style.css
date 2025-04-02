@@ -128,21 +128,25 @@ header {
   font-weight: var(--font-weight-card);
   font-size: 14px;
   line-height: 100%;
-  text-shadow: 0px 0px 2px var(--shadow-color);
+  text-shadow: -1px 0 var(--shadow-color), 
+              0 1px var(--shadow-color),
+              1px 0 var(--shadow-color), 
+              0 -1px var(--shadow-color);
   mix-blend-mode: hard-light;
 }
+
+@supports ((text-stroke: 1px var(--shadow-color)) or (-webkit-text-stroke: 1px var(--shadow-color))) {
+  .card__image-label {
+      -webkit-text-stroke: 1px var(--label-line-color);
+      text-stroke: 1px var(--label-line-color);
+      text-shadow: none;
+    }
+  }
 
 @media (width <= 375px) {
   .card__image-label {
     top: 20px;
     right: 11px;
-  }
-}
-
-@supports (mix-blend-mode: hard-light) {
-  .card__image-label {
-    text-shadow: 0 0 2px var(--shadow-color);
-    mix-blend-mode: hard-light;
   }
 }
 

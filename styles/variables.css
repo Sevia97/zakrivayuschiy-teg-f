@@ -9,7 +9,7 @@
   --header-description-size: clamp(14px,calc(14px + (23 - 14) * (100vw - 375px) / (1440 - 375)), 23px);
   --header-padding: clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem) clamp(0.875rem, -1.4688rem + 10vw, 7.53125rem);
   --content-size-s: 100%;
-  --content-size-l: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);;
+  --content-size-l: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
   
   --shadow-color: #fff;
   --border-color: #000;

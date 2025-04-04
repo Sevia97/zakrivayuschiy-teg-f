@@ -15,17 +15,17 @@
 }
 
 .filter__invert {
-  filter: invert(70%);
+  filter: invert(10%);
 }
 
 .filter__sepia-full {
-  filter: sepia(100%);
+  filter: sepia(70%);
 }
 
 .filter__blur {
-  filter: blur(10px);
+  filter: blur(1px);
 }
 
 .filter__hue-rotate_blur {
-  filter: hue-rotate(90deg) blur(1px);
+  filter: hue-rotate(20deg) blur(1px);
 }

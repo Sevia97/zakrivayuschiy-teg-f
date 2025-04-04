@@ -113,7 +113,6 @@ header {
   position: absolute;
   top: 25px;
   right: 23px;
-  opacity: 0.5;
   font-family: var(--accent-font), "fantasy";
   font-weight: var(--font-weight-card);
   font-size: 14px;
